@@ -1,0 +1,25 @@
+// Fontes
+
+
+// CORES
+$primary: #FA4753;
+$secondary: #9BA5C9;
+$newBlack: #17181C;
+
+
+$theme-colors: (
+    "primary": $primary,
+    "secondaty": $secondary
+);
+
+$custom-colors: (
+  "newBlack": $newBlack
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// OUTRAS COISAS
+
+
+@import "../bootstrap/node_modules/bootstrap/scss/bootstrap";
