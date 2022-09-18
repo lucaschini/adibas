@@ -1,6 +1,3 @@
-// Fontes
-
-
 // CORES
 $primary: #FA4753;
 $secondary: #9BA5C9;
@@ -9,7 +6,7 @@ $newBlack: #17181C;
 
 $theme-colors: (
     "primary": $primary,
-    "secondaty": $secondary
+    "secondary": $secondary
 );
 
 $custom-colors: (
@@ -20,6 +17,5 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // OUTRAS COISAS
-
-
+$btn-font-weight: 600;
 @import "../bootstrap/node_modules/bootstrap/scss/bootstrap";
