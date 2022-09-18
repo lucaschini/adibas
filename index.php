@@ -175,7 +175,7 @@ $resultado = mysqli_query($conexao, $sql);
 	<div class="container my-5">
 		<div class="row align-items-center rounded-3 border shadow-lg" style="padding: 2rem;">
 			<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-				<img class="rounded-lg-3" src="bootstrap-docs.png" alt="" width="720">
+				<img class="rounded-lg-3" src="imagens/Imagens Tênis PAW/Tênis das Nuvens.jpg" alt="" width="100%">
 			</div>
 			<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
 				<h1 class="display-4 fw-bold lh-1">Novo Nike Gray Soul</h1>
@@ -218,11 +218,11 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon bg-primary rounded-5" aria-hidden="true"></span>
+			<span class="carousel-control-prev-icon bg-primary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
 			<span class="visually-hidden">Previous</span>
 		</button>
 		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-			<span class="carousel-control-next-icon bg-primary rounded-5" aria-hidden="true"></span>
+			<span class="carousel-control-next-icon bg-primary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
