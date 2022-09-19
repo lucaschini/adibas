@@ -71,6 +71,8 @@ $resultado = mysqli_query($conexao, $sql);
 		</div>
 	</nav>
 
+
+
 	<div class="container my-5">
 		<div class="row align-items-center rounded-3 border shadow-lg" style="padding: 2rem;">
 			<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -179,11 +181,6 @@ $resultado = mysqli_query($conexao, $sql);
 			</a>
 
 			<ul class="nav col-md-4 justify-content-end">
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
 			</ul>
 		</footer>
 	</div>
