@@ -24,7 +24,7 @@ $resultado = mysqli_query($conexao, $sql);
 <body>
 	<nav class="navbar bg-primary" style="flex-wrap: nowrap">
 		<div class="container-fluid" style="margin: 0">
-			<a class="navbar-brand" href="#">Logo</a>
+			<a class="navbar-brand" href="#"><img src="imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
 			<div class="d-grid gap-1" style="width: 40vw;">
 				<button class="btn btn-primary" type="button">Produtos</button>
 			</div>
@@ -32,7 +32,7 @@ $resultado = mysqli_query($conexao, $sql);
 			<div>
 				<button type="button" class="btn btn-primary">Login</button>
 				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-				<img src="imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32">
+					<img src="imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32">
 				</button>
 			</div>
 
@@ -58,107 +58,6 @@ $resultado = mysqli_query($conexao, $sql);
 								<div class="d-flex w-100 align-items-center justify-content-between">
 									<strong class="mb-1">List group item heading</strong>
 									<small class="text-muted">Tues</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Mon</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Wed</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Tues</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Mon</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Wed</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Tues</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Mon</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Wed</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Tues</small>
-								</div>
-								<div class="col-10 mb-1 small">
-									Some placeholder content in a paragraph below the heading
-									and date.
-								</div>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
-								<div class="d-flex w-100 align-items-center justify-content-between">
-									<strong class="mb-1">List group item heading</strong>
-									<small class="text-muted">Mon</small>
 								</div>
 								<div class="col-10 mb-1 small">
 									Some placeholder content in a paragraph below the heading
@@ -194,125 +93,100 @@ $resultado = mysqli_query($conexao, $sql);
 				<div class="card" style="width: 18rem;">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Card title1</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
 					</div>
 				</div>
 				<div class="card" style="width: 18rem;">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Card title2</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
 					</div>
 				</div>
 				<div class="card" style="width: 18rem;">
 					<img src="..." class="card-img-top" alt="...">
 					<div class="card-body">
-						<h5 class="card-title">Card title</h5>
+						<h5 class="card-title">Card title3</h5>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						<a href="#" class="btn btn-primary">Go somewhere</a>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-item" style="height: 40vh; display:flex; justify-content:center; gap:10vw;">
+				<div class="card" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title4</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title5</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
+					</div>
+				</div>
+				<div class="card" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title6</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-secondary">Go somewhere</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon bg-primary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
+			<span class="carousel-control-prev-icon bg-secondary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
 			<span class="visually-hidden">Previous</span>
 		</button>
 		<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-			<span class="carousel-control-next-icon bg-primary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
+			<span class="carousel-control-next-icon bg-secondary rounded-5" aria-hidden="true" style="padding: 2rem;"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
 	</div>
 
-	<h1 align='center'>Aproveite a Promoção</h1>
-	<table border=1 align=center width=80%>
-		<thead>
-			<tr>
-				<th colspan="3">Descrição do Produto</th>
-				<th>De</th>
-				<th>Por</th>
-				<th>Adicionar ao carrinho</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php
-			while ($linha = mysqli_fetch_array($resultado)) {
-				echo "<tr>";
-				echo "<td align='center' width='200'><img width='180' src='imagens/" . $linha["nomeFoto"] . "'></td>";
-				echo "<td align='center'><h1>" . $linha["produto"] . "</h1></td>";
-				echo "<td align='center'><h1>" . $linha["descricaoProduto"] . "</h1></td>";
-				echo "<td align='center'><h1><s>" . $linha["precoVenda"] . "</h1></s></td>";
-				echo "<td align='center'><h1>" . $linha["precoPromocao"] . "</h1></td>";
-				echo "<td align='center' width=120>" .
-					"<a href=\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"><img width=\"20%\" src=\"adicionar.png\"> </a>" .
-					"</td>";
-			?>
+	<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+		<div class="row align-items-center g-lg-5 py-5">
+			<div class="col-lg-7 text-center text-lg-start">
+				<h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
+				<p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+			</div>
+			<div class="col-md-10 mx-auto col-lg-5">
+				<form class="p-4 p-md-5 border rounded-3 bg-light">
+					<div class="form-floating mb-3">
+						<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+						<label for="floatingInput">Email address</label>
+					</div>
+					<button class="w-100 btn btn-lg btn-secondary" type="submit">Sign up</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
+	<div class="container">
+		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+			<p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
 
-			<?php
+			<a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+				<img src="imagens/Adibas.png" alt="Logo" class="bi me-2" width="40" height="32">
+			</a>
 
-				echo "</td>";
-				echo "</tr>";
-			}
-
-			?>
-		</tbody>
-	</table>
-	<p></p>
-	<?php
-	$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='n' order by produto";
-	$resultado = mysqli_query($conexao, $sql);
-
-	?>
-	<h1 align='center'>Lista de Produtos</h1>
-	<table border=1 align=center width=80%>
-		<thead>
-			<tr>
-				<th colspan="3">Descrição do Produto</th>
-				<th>Preço</th>
-				<th>Adicionar ao carrinho</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php
-			while ($linha = mysqli_fetch_array($resultado)) {
-				echo "<tr>";
-				echo "<td align='center' width='180'><img width='160' src='imagens/" . $linha["nomeFoto"] . "'></td>";
-				echo "<td align='center'><h3>" . $linha["produto"] . "</h3></td>";
-				echo "<td align='center'><h3>" . $linha["descricaoProduto"] . "</h3></td>";
-				echo "<td align='center'><h3>" . $linha["precoVenda"] . "</h3></td>";
-				echo "<td  align='center' width=120>" .
-					"<a href=\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"><img width=\"20%\" src=\"adicionar.png\"> </a>" .
-					"</td>";
-			?>
-
-
-			<?php
-
-				echo "</td>";
-				echo "</tr>";
-			}
-
-			mysqli_close($conexao);
-			?>
-		</tbody>
-	</table>
-	<p></p>
-
-	<form action="carrinho.php">
-		<input type="hidden" name="acao" value="limpar">
-		<button type='submit'>Limpar carrinho</button>
-	</form>
-	<p></p>
-	<form action="carrinho.php">
-		<input type="hidden" name="acao" value="finalizar">
-		<button type='submit'>Conferir carrinho</button>
-	</form>
-	<p></p>
-
+			<ul class="nav col-md-4 justify-content-end">
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+			</ul>
+		</footer>
+	</div>
 </body>
 
 </html>
