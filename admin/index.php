@@ -11,31 +11,44 @@
 	<title>Dogão Lanches</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/meu.css">
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/style2.css">
 
-	<script>
-	</script>
+	<script src="bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
 
 	</head>
-<body>
-	<h1 align=center>Dogão Lanches - Página adminstrativa</h1>
-	
-	
-	<?php
-	echo "<h1>Seja Bem-Vindo!, ".$_SESSION["nome"]."</h1>";
-	if (($_SESSION["funcao"] === "gerente")) {?>
-		<form action="listarProduto.php">
-		<button type="submit">Proudutos</button>
-		</form>
-		<p></p>
-	<?php }?>
-	<form action="listarFuncionario.php">
-	<button type="submit">Funcionários</button>
-	</form> 
-	<p></p>
-    <form action="sair.php">
-	<button type="submit">sair</button>
-	</form>	
+<body class="center bg-secondary">
+<div class="container">
+		<div class="row align-items-center rounded-3 border shadow-lg bg-white" style="padding: 2rem; justify-content: center	;">
+			<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+				<main class="form-signin w-100 m-auto" style="display:flex; flex-direction:column; align-items:center; gap:2rem; text-align:center;">
+				<img src="../imagens/Adibas.png" alt="Logo" width="160" height="128">
+				<div style="display:flex; flex-direction:column; gap:2rem; ">
+					<?php
+						echo "<h1>Seja bem-vindo, ".$_SESSION["nome"]."!</h1>";
+						if (($_SESSION["funcao"] === "gerente")) {?>
+							<form action="listarProduto.php">
+							<button type="submit" class="w-100 btn btn-lg btn-secondary" type="submit">Produtos</button>
+							</form>
+							
+							<form action="listarProduto.php">
+							<button type="submit" class="w-100 btn btn-lg btn-secondary" type="submit">Relatório de Vendas</button>
+							</form>
+							
+						<?php }?>
+						<form action="listarFuncionario.php">
+						<button type="submit" class="w-100 btn btn-lg btn-secondary" type="submit">Funcionários</button>
+						</form> 
+						
+						<form action="sair.php">
+						<button type="submit" class="w-100 btn btn-lg btn-secondary" type="submit">Sair</button>
+						</form>
+						</div>
+                  </main>
+			</div>
+		</div>
+	</div>
+		
 
 </body>
 </html> 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style2.css" />
+    <script src="bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
+    <title>Login</title>
+  </head>
+  <body class="center bg-primary">
+    <div class="container">
+      <div
+        class="row align-items-center rounded-3 border shadow-lg bg-white"
+        style="padding: 2rem; justify-content: space-around"
+      >
+        <div class="col-lg-4 p-0 overflow-hidden">
+          <img
+            class="rounded-lg-3"
+            src="imagens/login.jpg"
+            alt=""
+            width="100%"
+          />
+        </div>
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+          <main class="form-signin w-100 m-auto">
+            <ul class="nav nav-pills nav-fill">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="entrar.html"
+                  style="font-weight: 600; font-size: 1.5rem"
+                  >Entrar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="cadastro.html"
+                  style="font-weight: 600; font-size: 1.5rem"
+                  >Cadastre-se</a
+                >
+              </li>
+            </ul>
+            <form id="form">
+              <div class="form-floating" style="margin-top: 1rem">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                />
+                <label for="floatingInput">Email</label>
+              </div>
+
+              <div class="form-floating" style="margin-top: 1rem">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                />
+                <label for="floatingPassword">Senha</label>
+              </div>
+
+              <div class="checkbox mb-3" style="margin-top: 1rem">
+                <label>
+                  <input type="checkbox" value="remember-me" /> Lembrar senha
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                Entrar
+              </button>
+            </form>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll("a").forEach((link) => {
+        const conteudo = document.getElementById("form");
+
+        link.onclick = function (e) {
+          e.preventDefault();
+          fetch(link.href)
+            .then((resp) => resp.text())
+            .then((html) => (conteudo.innerHTML = html));
+        };
+      });
+    </script>
+  </body>
+</html>
