@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Nov-2021 às 15:18
--- Versão do servidor: 10.4.17-MariaDB
--- versão do PHP: 8.0.1
+-- Tempo de geração: 21-Set-2022 às 00:17
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `dogao`
+-- Banco de dados: `adibas`
 --
 
 -- --------------------------------------------------------
@@ -29,14 +29,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbcliente` (
   `idCliente` int(11) NOT NULL,
-  `ativo` char(1) NOT NULL,
   `email` varchar(250) NOT NULL,
   `senha` varchar(250) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `rua` varchar(50) NOT NULL,
   `bairro` varchar(30) NOT NULL,
-  `fone` varchar(30) NOT NULL
+  `fone` varchar(30) NOT NULL,
+  `funcao` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tbcliente`
+--
+
+INSERT INTO `tbcliente` (`idCliente`, `email`, `senha`, `nome`, `rua`, `bairro`, `fone`, `funcao`) VALUES
+(12, 'parochasoares@gmail.com', '123456', 'Paulo André Rocha Soares', 'Rua dos bobos', 'Zero', '19971699117', 'cliente'),
+(15, 'alo@alo.com', '123456', 'paulo', '123', '123', '19971699117', 'cliente');
 
 -- --------------------------------------------------------
 
@@ -59,12 +67,8 @@ CREATE TABLE `tbfunc` (
 
 INSERT INTO `tbfunc` (`idFunc`, `ativo`, `email`, `senha`, `nome`, `funcao`) VALUES
 (1, 's', 'supervisor@supervisor.com', 'supervisor', 'supervisor', 'gerente'),
-(2, 's', 'teste5@teste.br', '123456', 'João Grandão', 'gerente'),
 (3, 's', 'teste15@teste.com', '123456', 'Paulo Coelho', 'vendedor'),
-(4, 's', 'teste1@teste.com', '123456', 'Paulo', 'vendedor'),
-(5, 'n', 'testeXX@teste.com.br', '123456', 'Pacato Silva', 'caixa'),
-(6, 'n', '', '123456', '', ''),
-(7, 's', 'teste5@teste.com', '123456', 'Joana', 'caixa');
+(8, 's', 'pa@pa.com', '123456', 'Paulo', 'vendedor');
 
 -- --------------------------------------------------------
 
@@ -73,12 +77,24 @@ INSERT INTO `tbfunc` (`idFunc`, `ativo`, `email`, `senha`, `nome`, `funcao`) VAL
 --
 
 CREATE TABLE `tbpedido` (
-  `idPedito` int(11) NOT NULL,
+  `idPedido` int(11) NOT NULL,
   `idCliente` int(11) NOT NULL,
   `idProduto` int(11) NOT NULL,
-  `data` date NOT NULL,
+  `quantidade` int(11) NOT NULL,
+  `data` varchar(15) NOT NULL,
   `precoPago` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `tbpedido`
+--
+
+INSERT INTO `tbpedido` (`idPedido`, `idCliente`, `idProduto`, `quantidade`, `data`, `precoPago`) VALUES
+(1, 12, 15, 1, '20/09/2022', '10.50'),
+(2, 12, 14, 2, '20/09/2022', '16.00'),
+(3, 12, 12, 1, '20/09/2022', '5.00'),
+(4, 12, 1, 1, '20/09/2022', '319.99'),
+(5, 12, 7, 1, '20/09/2022', '219.99');
 
 -- --------------------------------------------------------
 
@@ -102,12 +118,13 @@ CREATE TABLE `tbproduto` (
 --
 
 INSERT INTO `tbproduto` (`idProduto`, `ativo`, `produto`, `descricaoProduto`, `precoVenda`, `promocao`, `precoPromocao`, `nomeFoto`) VALUES
-(11, 's', 'Salgado', 'coxinha de frango', '5.00', 'n', '0.00', '16362188276186b7cb2307c.jpg'),
-(12, 's', 'Salgado', 'coxinha de frango e catupiry', '5.00', 'n', '0.00', '16362188786186b7feb53cb.jpg'),
-(13, 's', 'Salgado', 'coxinha de queijo grande', '4.50', 'n', '4.40', '16362200836186bcb3c4239.jpg'),
-(14, 's', 'Pastel', 'queijo e presunto', '9.00', 's', '8.00', '16362189686186b85871145.jpg'),
-(15, 's', 'Pastel', 'frango e catupiry', '10.50', 'n', '10.00', '16362200296186bc7d6b205.jpg'),
-(16, 'n', 'Salgado', 'bolinha de queijo ', '8.00', 'n', '0.00', '1636639929618d24b930def.jpg');
+(1, 's', 'Air Cloud', 'Confortável e leve, pra quem vive nas nuvens. ☁', '350.00', 's', '319.99', '1663666428632988fc49309.png'),
+(2, 's', 'Air Banana', 'Simples e pra todas as situações, pra você que não gosta de sair do básico. 🍌', '219.99', 'n', '0.00', '16636664976329894116ff8.png'),
+(3, 's', 'Air Citric', 'Para você que gosta de algo mais ousado, e não tem medo da acidez alheia. 🍋', '229.99', 'n', '0.00', '16636665236329895b981cf.png'),
+(4, 's', 'Air Flower', 'Para você que é mais doce, e busca pelo estilo e conforto. 💐', '239.99', 'n', '0.00', '166366655163298977e85e8.png'),
+(5, 's', 'Air Dragon Fruit', 'Para você que é diferenciado, e quer mostrar que não é como os outros. 🐉', '209.99', 'n', '0.00', '1663666613632989b5cab41.png'),
+(6, 's', 'Air Midnight', 'Para você que busca furtividade e simplicidade, mas deixando sua marca. 🐱‍👤', '309.99', 'n', '290.99', '1663666638632989ce6f8a3.png'),
+(7, 's', 'Air Apple', 'Para você que quer tirar a gravidade da cabeça e curtir. 🍎', '219.99', 'n', '0.00', '1663709944632a32f89fdf5.png');
 
 --
 -- Índices para tabelas despejadas
@@ -129,7 +146,7 @@ ALTER TABLE `tbfunc`
 -- Índices para tabela `tbpedido`
 --
 ALTER TABLE `tbpedido`
-  ADD PRIMARY KEY (`idPedito`);
+  ADD PRIMARY KEY (`idPedido`);
 
 --
 -- Índices para tabela `tbproduto`
@@ -145,25 +162,25 @@ ALTER TABLE `tbproduto`
 -- AUTO_INCREMENT de tabela `tbcliente`
 --
 ALTER TABLE `tbcliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `tbfunc`
 --
 ALTER TABLE `tbfunc`
-  MODIFY `idFunc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idFunc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `tbpedido`
 --
 ALTER TABLE `tbpedido`
-  MODIFY `idPedito` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `tbproduto`
 --
 ALTER TABLE `tbproduto`
-  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -6,7 +6,7 @@
 		
 	if ($_POST["acao"]==="incluir")	{
 		// Inclusão de produto
-		$conexao = mysqli_connect("localhost", "root", "", "dogao");
+		$conexao = mysqli_connect("localhost", "root", "", "adibas");
 					
 		$produto = $_POST['produto'];					
 		$descricaoProduto = $_POST['descricaoProduto'];
@@ -32,7 +32,7 @@
 		mysqli_close($conexao);
 	} elseif ($_POST["acao"]==="alterar") {
 		// Alteração de produto
-		$conexao = mysqli_connect("localhost", "root", "", "dogao");
+		$conexao = mysqli_connect("localhost", "root", "", "adibas");
 				
 		$idProduto = $_POST["idProduto"];
 		$produto = $_POST['produto'];					
@@ -90,7 +90,7 @@
 				
 				// registrando o nome da imagem no banco de dados
 				
-				$conexao = mysqli_connect("localhost", "root", "", "dogao");
+				$conexao = mysqli_connect("localhost", "root", "", "adibas");
 				
 				if($_POST["acao"]==="alterar") {$idProduto = $_POST["idProduto"];}
 				    
