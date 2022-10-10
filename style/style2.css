@@ -1,12 +1,37 @@
 * {
   margin: 0;
 }
-.center {
-  height: 100vh;
+.center, .center-prod {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
+
+.center-prod {
+  flex-direction: column;
+  height: auto !important;
+  margin-top: 2rem;
+}
+.body-login{
+  display: flex;
+  flex-direction: column;
+}
+.table td, th{
+  vertical-align: middle !important;
+}
+
+.form-adm{
+  border-color: #9BA5C9 !important;
+}
+
+.form-adm:focus{
+  box-shadow: 0 0 0 0.15rem #9BA5C9 !important;
+}
+
 
 .swiper-slide {
   text-align: center;
