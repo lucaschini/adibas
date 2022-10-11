@@ -71,7 +71,7 @@
 					<tfoot>
 						<tr>
 							<td>
-								<a href="index.php"><button type='button' class="btn btn-sm btn-outline-primary">continuar comprando</button></a>
+								<a href="prod.php"><button type='button' class="btn btn-sm btn-outline-primary">Continuar Comprando</button></a>
 
 							</td>
 							<td colspan="5">
