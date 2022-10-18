@@ -16,6 +16,7 @@ $resultado = mysqli_query($conexao, $sql);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style2.css">
+	<link rel="shortcut icon" href="imagens/icons/Adibas.ico" type="image/x-icon">
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
