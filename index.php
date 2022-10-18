@@ -16,6 +16,7 @@ $resultado = mysqli_query($conexao, $sql);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style2.css">
+	<link rel="shortcut icon" href="imagens/icons/Adibas.ico" type="image/x-icon">
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
@@ -33,7 +34,15 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 
 			<div>
-				<a href="admin/login.php"><button type="button" class="btn btn-primary">Login</button></a>
+				<a href="admin/login.php"><button type="button" class="btn btn-primary">
+						<?php
+						if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
+							echo "Login";
+						} else {
+							echo '<img src="imagens/icons/user.svg" alt="User" width="50" height="32">';
+						}
+						?>
+					</button></a>
 				<button class="navbar-toggler" type="button">
 					<a href="carrinho.php"><img src="imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32"></a>
 				</button>

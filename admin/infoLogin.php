@@ -24,11 +24,10 @@ session_start();
         <div class="container-fluid" style="margin: 0">
             <a class="navbar-brand" href="../index.php"><img src="../imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
             <div class="d-grid gap-1">
-                <a href="prod.php" style="text-align:center;"><button class="btn btn-primary" type="button" style="width: 40vw;	">Produtos</button></a>
+                <a href="../prod.php" style="text-align:center;"><button class="btn btn-primary" type="button" style="width: 40vw;	">Produtos</button></a>
             </div>
 
             <div>
-                <a href="admin/login.php"><button type="button" class="btn btn-primary">Login</button></a>
                 <button class="navbar-toggler" type="button">
                     <a href="../carrinho.php"><img src="../imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32"></a>
                 </button>

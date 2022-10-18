@@ -1,3 +1,10 @@
+<?php
+session_start();
+//conectar com o banco de dados
+$conexao = mysqli_connect("localhost", "root", "", "adibas");
+$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='s' order by produto";
+$resultado = mysqli_query($conexao, $sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,23 +27,22 @@
 			</div>
 
 			<div>
-				<a href="admin/login.php"><button type="button" class="btn btn-primary">Login</button></a>
+				<a href="admin/login.php"><button type="button" class="btn btn-primary">
+						<?php
+						if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
+							echo "Login";
+						} else {
+							echo '<img src="imagens/icons/user.svg" alt="User" width="50" height="32">';
+						}
+						?>
+					</button></a>
 				<button class="navbar-toggler" type="button">
 					<a href="carrinho.php"><img src="imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32"></a>
 				</button>
 			</div>
 		</div>
 	</nav>
-<div class="center-prod">
-	
-		<?php
-		session_start();
-		//conectar com o banco de dados
-		$conexao = mysqli_connect("localhost", "root", "", "adibas");
-		$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='s' order by produto";
-		$resultado = mysqli_query($conexao, $sql);
-		?>
-	
+	<div class="center-prod">
 		<h1 align='center'>Aproveite a Promoção</h1>
 		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
 			<thead>
@@ -70,7 +76,7 @@
 		$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='n' order by produto";
 		$resultado = mysqli_query($conexao, $sql);
 		?>
-	
+
 		<h1 align='center'>Mais vendidos</h1>
 		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
 			<thead>
@@ -94,12 +100,12 @@
 					echo "</td>";
 					echo "</tr>";
 				}
-	
+
 				mysqli_close($conexao);
 				?>
 			</tbody>
 		</table>
-</div>
+	</div>
 
 </body>
 

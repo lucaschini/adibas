@@ -3,19 +3,18 @@
 }
 .center, .center-prod {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .center-prod {
   flex-direction: column;
   height: auto !important;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
+
 .body-login{
   display: flex;
   flex-direction: column;
