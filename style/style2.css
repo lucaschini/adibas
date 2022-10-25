@@ -1,6 +1,12 @@
 * {
   margin: 0;
 }
+
+.texti{
+  display: flex;
+  justify-content: center;
+}
+
 .center, .center-prod {
   width: 100%;
   height: 100vh;
@@ -57,4 +63,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+*::-webkit-scrollbar{
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+
+  background: #FA4753;        /* color of the tracking area */
 }

@@ -56,7 +56,7 @@ $resultado = mysqli_query($conexao, $sql);
 			<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
 				<img class="rounded-lg-3" src="imagens/TENIS PNG/Tênis das Nuvens.png" alt="" width="100%">
 			</div>
-			<div class="col-lg-7 p-3 p-lg-5 pt-lg-3" style="height: 10vh; display:flex; flex-direction: column; align-items: center; justify-content: center;">
+			<div class="col-lg-7 p-3 p-lg-5 pt-lg-3" style="height: 10vh; display:flex; flex-direction: column; align-items: center; justify-content: center; gap:2rem;">
 				<h1 class="display-4 fw-bold lh-1">Novo Nike Air Cloud</h1>
 				<p class="lead">Confortável e leve, pra quem vive nas nuvens. ☁</p>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
@@ -66,6 +66,9 @@ $resultado = mysqli_query($conexao, $sql);
 		</div>
 	</div>
 
+	<div class="texti">
+		<h1 style="font-size: 4rem;">Produtos mais comprados! 💲</h1>
+	</div>
 
 	<div class="swiper mySwiper" style="height: 90vh;">
 		<div class="swiper-wrapper">
