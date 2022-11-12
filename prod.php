@@ -81,45 +81,24 @@ $resultado = mysqli_query($conexao, $sql);
 		?>
 
 		<!-- Produtos -->
+		
+		<div class="grid">
+			<?php
+			while ($linha = mysqli_fetch_array($resultado)){
+				echo "<div class='card shadow-lg' style='width: 100%; background-color: #EEEEEE; font-weight: 700;'>";
+				echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto' width='180px' >";
+				echo "<div class='card-body'>";
+				echo "<h5 class='card-title'>" . $linha["produto"] . "</h5>";
+				echo "<p class='card-text' style='color: #a3a5ae;'>" . $linha["descricaoProduto"] . "</p>";
+				echo "<p>R$ " . $linha["precoVenda"] . "</p>";
+				echo "<a href='\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"' class='btn btn-primary'>Adicionar ao carrinho</a>";
+				echo "</div>";
+				echo "</div>";
+			}
 
-		<div class="card" style="width: 18rem;">
-			<img src="..." class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
+			mysqli_close($conexao);
+			?>
 		</div>
-
-		<h1 align='center'>Mais vendidos</h1>
-		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
-			<thead>
-				<tr>
-					<th colspan="3">Descrição do Produto</th>
-					<th>Preço</th>
-					<th>Adicionar ao carrinho</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-				while ($linha = mysqli_fetch_array($resultado)) {
-					echo "<tr>";
-					echo "<td align='center' width='180'><img width='160' src='imagens/" . $linha["nomeFoto"] . "'></td>";
-					echo "<td><h3>" . $linha["produto"] . "</h3></td>";
-					echo "<td><h3>" . $linha["descricaoProduto"] . "</h3></td>";
-					echo "<td><h3>" . $linha["precoVenda"] . "</h3></td>";
-					echo "<td width=120>" .
-						"<a href=\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"><img width=\"50%\" src=\"imagens\icons\plus-square-fill.svg\"> </a>" .
-						"</td>";
-					echo "</td>";
-					echo "</tr>";
-				}
-
-				mysqli_close($conexao);
-				?>
-			</tbody>
-		</table>
-	</div>
 
 </body>
 
