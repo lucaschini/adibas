@@ -4,7 +4,6 @@ session_start();
 $conexao = mysqli_connect("localhost", "root", "", "adibas");
 $sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='s' order by produto";
 $resultado = mysqli_query($conexao, $sql);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,16 +15,15 @@ $resultado = mysqli_query($conexao, $sql);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style2.css">
-	<link rel="shortcut icon" href="imagens/icons/Adibas.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="imagens/Adibas.png" type="image/x-icon">
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
 	<script src="bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
-
-
 </head>
 
 <body>
+	<!-- NAVBAR -->
 	<nav class="navbar bg-primary" style="flex-wrap: nowrap">
 		<div class="container-fluid" style="margin: 0">
 			<a class="navbar-brand" href="index.php"><img src="imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
@@ -50,7 +48,7 @@ $resultado = mysqli_query($conexao, $sql);
 		</div>
 	</nav>
 
-
+	<!-- CTA -->
 	<div class="container my-5">
 		<div class="row align-items-center rounded-3 border shadow-lg" style="padding: 2rem;">
 			<div class="col-lg-4 offset-lg-1 p-0 overflow-hidden">
@@ -65,7 +63,8 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- SLIDER -->
 	<div class="texti">
 		<h1 style="font-size: 4rem;">Produtos mais comprados! 💲</h1>
 	</div>
@@ -139,7 +138,7 @@ $resultado = mysqli_query($conexao, $sql);
 		<div class="swiper-pagination"></div>
 	</div>
 
-
+	<!-- NEWSLETTER -->
 	<div class="container col-xl-10 col-xxl-8 px-4 py-5">
 		<div class="row align-items-center g-lg-5 py-5">
 			<div class="col-lg-7 text-center text-lg-start">
@@ -157,7 +156,8 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 		</div>
 	</div>
-
+	
+	<!-- FOOTER -->
 	<div class="container">
 		<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 			<p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>

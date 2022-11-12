@@ -19,6 +19,7 @@ $resultado = mysqli_query($conexao, $sql);
 </head>
 
 <body>
+	<!-- NAVBAR -->
 	<nav class="navbar bg-primary" style="flex-wrap: nowrap">
 		<div class="container-fluid" style="margin: 0">
 			<a class="navbar-brand" href="index.php"><img src="imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
@@ -42,6 +43,8 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 		</div>
 	</nav>
+
+	<!-- Promoção -->
 	<div class="center-prod">
 		<h1 align='center'>Aproveite a Promoção</h1>
 		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
@@ -76,6 +79,17 @@ $resultado = mysqli_query($conexao, $sql);
 		$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='n' order by produto";
 		$resultado = mysqli_query($conexao, $sql);
 		?>
+
+		<!-- Produtos -->
+
+		<div class="card" style="width: 18rem;">
+			<img src="..." class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">Card title</h5>
+				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<a href="#" class="btn btn-primary">Go somewhere</a>
+			</div>
+		</div>
 
 		<h1 align='center'>Mais vendidos</h1>
 		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
