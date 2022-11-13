@@ -9,8 +9,8 @@ session_start();
     <title>Adibas</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style2.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
@@ -39,11 +39,11 @@ session_start();
                         }
                         ?>
 
-                        <form action="index.php">
+                        <form action="../index.php">
                             <button type="submit" class="btn btn-primary">Voltar</button>
                         </form>
                         <br>
-                        <form action="admin/sair.php">
+                        <form action="sair.php">
                             <button type="submit" class="btn btn-primary">Sair da conta</button>
                         </form>
                     </main>

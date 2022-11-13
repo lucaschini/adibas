@@ -26,7 +26,7 @@ session_start();
     header("Location: index.php");
   } else if ((isset($_SESSION["logado"])) && ($_SESSION["logado"] == TRUE) && ($_SESSION["funcao"] == 'cliente')) {
     //O cliente ja efetuou o login então ele vai para a página de informações
-    header("Location: ../infologin.php");
+    header("Location: infologin.php");
   } else {
     // Verificando se o usário digitou email e  senha e clicou em "logar"
     if ((isset($_POST["email"])) && (isset($_POST["senha"]))) {
