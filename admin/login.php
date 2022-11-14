@@ -128,7 +128,7 @@ session_start();
   <div class="center">
     <div class="container">
       <h1 id="mensagem" style="color:red;"></h1>
-      <div class="row align-items-center rounded-3 border shadow-lg bg-white" style="padding: 2rem; justify-content: space-around">
+      <div class="row align-items-center rounded-3 border shadow-lg bg-white" style="padding: 2rem; justify-content: space-around; min-height: 70vh;">
         <div class="col-lg-4 p-0 overflow-hidden">
           <img class="rounded-lg-3" src="../imagens/login.jpg" alt="" width="100%" />
         </div>

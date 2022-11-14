@@ -18,7 +18,7 @@
 		</div>
 	</nav>
 	<div class="center" style="margin: 0 !important; padding: 0 !important;">
-		<div class="rounded-3 border shadow-lg bg-white" style="width:80vw; padding: 2rem;">
+		<div class="rounded-3 border shadow-lg bg-white" style="width:80vw; padding: 2rem; min-height: 70vh;">
 			<?php
 			session_start();
 			if (!isset($_SESSION['carrinho'])) {

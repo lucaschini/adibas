@@ -15,6 +15,7 @@ if ($_SESSION["funcao"] !== "gerente") {
 	<title>Adibas</title>
 	<link rel="stylesheet" href="../style/style.css" />
 	<link rel="stylesheet" href="../style/style2.css" />
+	<link rel="stylesheet" href="../style/styleadm.css">
 	<script src="../bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">

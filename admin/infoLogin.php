@@ -19,24 +19,8 @@ session_start();
 
 </head>
 
-<body>
-    <nav class="navbar bg-primary" style="flex-wrap: nowrap">
-        <div class="container-fluid" style="margin: 0">
-            <a class="navbar-brand" href="../index.php"><img src="../imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
-            <div class="d-grid gap-1">
-                <a href="../prod.php" style="text-align:center;"><button class="btn btn-primary" type="button" style="width: 40vw;	">Produtos</button></a>
-            </div>
-
-            <div>
-                <button class="navbar-toggler" type="button">
-                    <a href="../carrinho.php"><img src="../imagens/icons/cart2.svg" alt="Carrinho" width="32" height="32"></a>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="center"  style="margin: 0 !important; padding: 0 !important;">
+<body class="center">
+    <div style="margin: 0 !important; padding: 0 !important; width: 80vw;">
         <div class="container">
             <h1 id="mensagem" style="color:red;"></h1>
             <div class="row align-items-center rounded-3 border shadow-lg bg-white" style="padding: 2rem; justify-content: space-around">

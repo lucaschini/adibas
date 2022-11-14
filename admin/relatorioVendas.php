@@ -16,6 +16,7 @@ if ($_SESSION["funcao"] !== "gerente") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="stylesheet" href="../style/style2.css" />
+    <link rel="stylesheet" href="../style/styleadm.css">
     <script src="bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
     <title>Relatório de Vendas</title>
 </head>

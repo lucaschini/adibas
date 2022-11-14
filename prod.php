@@ -19,6 +19,7 @@ $resultado = mysqli_query($conexao, $sql);
 </head>
 
 <body>
+	<!-- NAVBAR -->
 	<nav class="navbar bg-primary" style="flex-wrap: nowrap">
 		<div class="container-fluid" style="margin: 0">
 			<a class="navbar-brand" href="index.php"><img src="imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
@@ -42,69 +43,50 @@ $resultado = mysqli_query($conexao, $sql);
 			</div>
 		</div>
 	</nav>
+
+	<!-- Promoção -->
 	<div class="center-prod">
 		<h1 align='center'>Aproveite a Promoção</h1>
-		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
-			<thead>
-				<tr>
-					<th colspan="3">Descrição do Produto</th>
-					<th>De</th>
-					<th>Por</th>
-					<th>Adicionar ao carrinho</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-				while ($linha = mysqli_fetch_array($resultado)) {
-					echo "<tr>";
-					echo "<td align='center' width='200'><img width='180' src='imagens/" . $linha["nomeFoto"] . "'></td>";
-					echo "<td ><h1>" . $linha["produto"] . "</h1></td>";
-					echo "<td ><h1>" . $linha["descricaoProduto"] . "</h1></td>";
-					echo "<td ><h1><s>" . $linha["precoVenda"] . "</h1></s></td>";
-					echo "<td ><h1>" . $linha["precoPromocao"] . "</h1></td>";
-					echo "<td  width=120>" .
-						"<a href=\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"><img width=\"50%\" src=\"imagens\icons\plus-square-fill.svg\"> </a>" .
-						"</td>";
-					echo "</td>";
-					echo "</tr>";
-				}
-				?>
-			</tbody>
-		</table>
-		<p></p>
+
+		<?php
+		while ($linha = mysqli_fetch_array($resultado)) {
+			echo "<div class='card shadow-lg' style='background-color: #EEEEEE; font-weight: 700;'>";
+			echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto' width='299px' height='299px' >";
+			echo "<div class='card-body'>";
+			echo "<h5 class='card-title'>" . $linha["produto"] . "</h5>";
+			echo "<p class='card-text' style='color: #a3a5ae;'>" . $linha["descricaoProduto"] . "</p>";
+			echo "<p style='text-decoration: line-through; color: red;'>R$ " . $linha["precoVenda"] . "</p>";
+			echo "<p style='color: green;'>R$ " . $linha["precoPromocao"] . "</p>";
+			echo "<a href='\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"' class='btn btn-primary'>Adicionar ao carrinho</a>";
+			echo "</div>";
+			echo "</div>";
+		}
+		?>
+
 		<?php
 		$sql = "SELECT * FROM `tbproduto` where `ativo`='s' and `promocao`='n' order by produto";
 		$resultado = mysqli_query($conexao, $sql);
 		?>
 
-		<h1 align='center'>Mais vendidos</h1>
-		<table align=center class="table table-hover shadow-lg" style="width: 80% !important;">
-			<thead>
-				<tr>
-					<th colspan="3">Descrição do Produto</th>
-					<th>Preço</th>
-					<th>Adicionar ao carrinho</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-				while ($linha = mysqli_fetch_array($resultado)) {
-					echo "<tr>";
-					echo "<td align='center' width='180'><img width='160' src='imagens/" . $linha["nomeFoto"] . "'></td>";
-					echo "<td><h3>" . $linha["produto"] . "</h3></td>";
-					echo "<td><h3>" . $linha["descricaoProduto"] . "</h3></td>";
-					echo "<td><h3>" . $linha["precoVenda"] . "</h3></td>";
-					echo "<td width=120>" .
-						"<a href=\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"><img width=\"50%\" src=\"imagens\icons\plus-square-fill.svg\"> </a>" .
-						"</td>";
-					echo "</td>";
-					echo "</tr>";
-				}
+		<!-- Produtos -->
 
-				mysqli_close($conexao);
-				?>
-			</tbody>
-		</table>
+		<div class="grid">
+			<?php
+			while ($linha = mysqli_fetch_array($resultado)) {
+				echo "<div class='card shadow-lg' style='background-color: #EEEEEE; font-weight: 700;'>";
+				echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto'>";
+				echo "<div class='card-body'>";
+				echo "<h5 class='card-title'>" . $linha["produto"] . "</h5>";
+				echo "<p class='card-text' style='color: #a3a5ae;'>" . $linha["descricaoProduto"] . "</p>";
+				echo "<p>R$ " . $linha["precoVenda"] . "</p>";
+				echo "<a href='\"carrinho.php?acao=adicionar&idProduto=" . $linha["idProduto"] . "\"' class='btn btn-primary'>Adicionar ao carrinho</a>";
+				echo "</div>";
+				echo "</div>";
+			}
+
+			mysqli_close($conexao);
+			?>
+		</div>
 	</div>
 
 </body>
