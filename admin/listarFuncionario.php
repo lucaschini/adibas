@@ -66,10 +66,10 @@ $resultado = mysqli_query($conexao, $sql);
 						"&funcao=" . $linha["funcao"];
 
 					echo	"<td width=120>" .
-						"<a href=\"trocarSenhaFuncionario.php?$dados\"><img width=\"20%\" src=\"chave.svg\"> </a>" .
-						"<a href=\"alterarFuncionario.php?$dados\"><img width=\"20%\" src=\"pencil-fill.svg\"> </a>";
+						"<a href=\"trocarSenhaFuncionario.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/key-fill.svg\"> </a>" .
+						"<a href=\"alterarFuncionario.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/pencil-square.svg\"> </a>";
 					if (($_SESSION["funcao"] === "gerente") && ($_SESSION["idFunc"] != $linha["idFunc"])) {
-						echo "<a href=\"excluirFuncionario.php?$dados\"><img width=\"20%\" src=\"excluir.svg\"> </a>";
+						echo "<a href=\"excluirFuncionario.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/x-square-fill.svg\"> </a>";
 					}
 					echo "</td>";
 					echo "</tr>";

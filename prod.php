@@ -51,7 +51,7 @@ $resultado = mysqli_query($conexao, $sql);
 		<?php
 		while ($linha = mysqli_fetch_array($resultado)) {
 			echo "<div class='card shadow-lg' style='background-color: #EEEEEE; font-weight: 700;'>";
-			echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto' width='299px' height='299px' >";
+			echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto' height='400px' >";
 			echo "<div class='card-body'>";
 			echo "<h5 class='card-title'>" . $linha["produto"] . "</h5>";
 			echo "<p class='card-text' style='color: #a3a5ae;'>" . $linha["descricaoProduto"] . "</p>";
@@ -74,7 +74,7 @@ $resultado = mysqli_query($conexao, $sql);
 			<?php
 			while ($linha = mysqli_fetch_array($resultado)) {
 				echo "<div class='card shadow-lg' style='background-color: #EEEEEE; font-weight: 700;'>";
-				echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top' alt='Imagem Do Produto'>";
+				echo "<img src='imagens/" . $linha["nomeFoto"] . "' class='card-img-top resize' alt='Imagem Do Produto'>";
 				echo "<div class='card-body'>";
 				echo "<h5 class='card-title'>" . $linha["produto"] . "</h5>";
 				echo "<p class='card-text' style='color: #a3a5ae;'>" . $linha["descricaoProduto"] . "</p>";
