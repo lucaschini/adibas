@@ -2,7 +2,7 @@
 $primary: #FA4753;
 $secondary: #9BA5C9;
 $newBlack: #17181C;
-
+$status: #66BB6A;
 
 $theme-colors: (
     "primary": $primary,
@@ -10,7 +10,8 @@ $theme-colors: (
 );
 
 $custom-colors: (
-  "newBlack": $newBlack
+  "newBlack": $newBlack,
+  "status": $status
 );
 
 // Merge the maps

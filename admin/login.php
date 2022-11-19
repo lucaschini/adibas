@@ -26,7 +26,7 @@ session_start();
     header("Location: index.php");
   } else if ((isset($_SESSION["logado"])) && ($_SESSION["logado"] == TRUE) && ($_SESSION["funcao"] == 'cliente')) {
     //O cliente ja efetuou o login então ele vai para a página de informações
-    header("Location: infologin.php");
+    header("Location: menucliente.html");
   } else {
     // Verificando se o usário digitou email e  senha e clicou em "logar"
     if ((isset($_POST["email"])) && (isset($_POST["senha"]))) {
@@ -79,7 +79,7 @@ session_start();
           $_SESSION['fone'] = $linha['telefone'];
           $_SESSION["funcao"] = $linha["funcao"];
 
-          header("Location: infologin.php");
+          header("Location: menucliente.html");
         } else { ?>
           <script>
             document.getElementById('mensagem').innerHTML = "Email e/ou Senha inválidados!"
@@ -115,12 +115,12 @@ session_start();
         $resultado = @mysqli_query($conexao, $sql);
         if (!$resultado) {
           die('Query Inválida: ' . @mysqli_error($conexao));
-          echo "<form action='infoLogin.php' onsubmit='window.onsubmit = function() { return true; };'>";
+          echo "<form action='menucliente.html' onsubmit='window.onsubmit = function() { return true; };'>";
           echo "<button type='submit'>Voltar</button>";
           echo "</form>";
         }
         mysqli_close($conexao);
-        header("Location: infoLogin.php");
+        header("Location: menucliente.html");
       }
     }
   }

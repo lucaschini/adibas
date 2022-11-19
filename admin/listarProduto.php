@@ -70,9 +70,9 @@ $resultado = mysqli_query($conexao, $sql);
 						"&precoPromocao=" . $linha["precoPromocao"] .
 						"&nomeFoto=" . $linha["nomeFoto"];
 					echo "<td width=120>" .
-						"<a href=\"alterarProduto.php?$dados\"><img width=\"20%\" src=\"pencil-fill.svg\"> </a>" .
-						"<a href=\"excluirProduto.php?$dados\"><img width=\"20%\" src=\"excluir.svg\"> </a>" .
-						"<a href=\"promocaoProduto.php?$dados\"><img width=\"20%\" src=\"promocao.svg\"> </a>" .
+						"<a href=\"alterarProduto.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/pencil-square.svg\"> </a>" .
+						"<a href=\"excluirProduto.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/x-square-fill.svg\"> </a>" .
+						"<a href=\"promocaoProduto.php?$dados\"><img width=\"20%\" src=\"../imagens/icons/cash-coin.svg\"> </a>" .
 						"</td>";
 				?>
 
