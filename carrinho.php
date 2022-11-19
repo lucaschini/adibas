@@ -17,7 +17,7 @@
 			<a class="navbar-brand" href="index.php"><img src="imagens/Adibas.png" alt="Logo" width="50" height="32"></a>
 		</div>
 	</nav>
-	<div class="center" style="margin: 0 !important; padding: 0 !important;">
+	<div class="center-90" style="margin: 0 !important; padding: 0 !important;">
 		<div class="rounded-3 border shadow-lg bg-white" style="width:80vw; padding: 2rem; min-height: 70vh;">
 			<?php
 			session_start();

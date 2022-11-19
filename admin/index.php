@@ -19,7 +19,7 @@ if (!isset($_SESSION["logado"]) || $_SESSION["logado"] != TRUE) {
 
 </head>
 
-<body class="center-index bg-secondary">
+<body class="center bg-secondary">
 	<div class="container">
 		<div class="row align-items-center rounded-3 border shadow-lg bg-white" style="padding: 2rem; justify-content: center;">
 			<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
