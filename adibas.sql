@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Set-2022 às 00:17
+-- Tempo de geração: 19-Nov-2022 às 20:13
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -94,7 +94,8 @@ INSERT INTO `tbpedido` (`idPedido`, `idCliente`, `idProduto`, `quantidade`, `dat
 (2, 12, 14, 2, '20/09/2022', '16.00'),
 (3, 12, 12, 1, '20/09/2022', '5.00'),
 (4, 12, 1, 1, '20/09/2022', '319.99'),
-(5, 12, 7, 1, '20/09/2022', '219.99');
+(5, 12, 7, 1, '20/09/2022', '219.99'),
+(6, 15, 1, 4, '21/09/2022', '1279.96');
 
 -- --------------------------------------------------------
 
@@ -124,7 +125,14 @@ INSERT INTO `tbproduto` (`idProduto`, `ativo`, `produto`, `descricaoProduto`, `p
 (4, 's', 'Air Flower', 'Para você que é mais doce, e busca pelo estilo e conforto. 💐', '239.99', 'n', '0.00', '166366655163298977e85e8.png'),
 (5, 's', 'Air Dragon Fruit', 'Para você que é diferenciado, e quer mostrar que não é como os outros. 🐉', '209.99', 'n', '0.00', '1663666613632989b5cab41.png'),
 (6, 's', 'Air Midnight', 'Para você que busca furtividade e simplicidade, mas deixando sua marca. 🐱‍👤', '309.99', 'n', '290.99', '1663666638632989ce6f8a3.png'),
-(7, 's', 'Air Apple', 'Para você que quer tirar a gravidade da cabeça e curtir. 🍎', '219.99', 'n', '0.00', '1663709944632a32f89fdf5.png');
+(7, 's', 'Air Apple', 'Para você que quer tirar a gravidade da cabeça e curtir. 🍎', '219.99', 'n', '0.00', '1663709944632a32f89fdf5.png'),
+(19, 's', 'Charmander', 'Para quem prefere os clássicos, mas não deixa de ter uma personalidade marcante e gentil.🔥', '249.99', 'n', '0.00', '166881694963782035d1705.png'),
+(20, 's', 'Bulbassauro', 'Para quem prefere o básico e é mais relaxado. 🍃', '399.99', 'n', '0.00', '166881700163782069d353c.png'),
+(21, 's', 'Squirtle', 'Para quem gosta de chamar a atenção e quer deixar sua marca. 🌊', '189.00', 'n', '0.00', '1668817057637820a176131.png'),
+(22, 's', 'Pikachu', 'Para quem se sente o protagonista da própria vida, e tem uma personalidade eletrizante. ⚡', '399.99', 'n', '0.00', '1668817102637820ce766a7.png'),
+(23, 's', 'AIR Dragonite', 'Para quem não se importa com as aparências, e tem orgulho de si. 😎', '599.99', 'n', '0.00', '1668817142637820f647e6b.png'),
+(24, 's', 'AIR Jigglypuff', 'Para as pessoas fofas e instáveis, que se irritam rápido. 😘😡', '599.99', 'n', '0.00', '1668817191637821277b0e0.png'),
+(25, 's', 'AIR Snorlax', 'Para quem é preguiçoso e pacífico, sempre buscando o simples. 😴', '599.99', 'n', '0.00', '166881724063782158e2c0d.png');
 
 --
 -- Índices para tabelas despejadas
@@ -162,7 +170,7 @@ ALTER TABLE `tbproduto`
 -- AUTO_INCREMENT de tabela `tbcliente`
 --
 ALTER TABLE `tbcliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `tbfunc`
@@ -174,13 +182,13 @@ ALTER TABLE `tbfunc`
 -- AUTO_INCREMENT de tabela `tbpedido`
 --
 ALTER TABLE `tbpedido`
-  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idPedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tbproduto`
 --
 ALTER TABLE `tbproduto`
-  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
