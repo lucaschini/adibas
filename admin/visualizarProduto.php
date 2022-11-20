@@ -2,13 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Dogão Lanches</title>
+	<title>Adibas</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="meu.css">
-
-	<script>
-	</script> 
 
 	</head>
 <body>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/style2.css" />
+    <script src="../bootstrap\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
+    <title>Cliente</title>
+  </head>
+
+  <body class="bg-primary">
+    <nav class="navbar bg-primary shadow-lg">
+      <div class="container-fluid" style="margin: 0">
+        <a class="navbar-brand" href="../index.php"
+          ><img src="../imagens/Adibas.png" alt="Logo" width="50" height="32"
+        /></a>
+      </div>
+    </nav>
+    <div class="center" style="margin: 0 !important; padding: 0 !important">
+      <div
+        class="rounded-3 border shadow-lg bg-white"
+        style="width: 80vw; padding: 1rem 1.5rem; min-height: 70vh"
+      >
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="disabled-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#disabled-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="disabled-tab-pane"
+              aria-selected="false"
+              disabled
+            >
+              Olá, user!😃
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="home-tab-pane"
+              aria-selected="true"
+            >
+              Meus dados
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="profile-tab-pane"
+              aria-selected="false"
+            >
+              Meus pedidos
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home-tab-pane"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+            tabindex="0"
+            style="padding: 1.5rem 0;"
+          >
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Nome</span>
+              <input
+                class="form-control"
+                type="text"
+                value="Disabled readonly input"
+                aria-label="Disabled input example"
+                disabled
+                readonly
+              />
+            </div>
+            <button type="button" class="btn btn-primary" style="margin: 1rem 0;">Alterar dados</button>
+            <form action="sair.php">
+              <button type="submit" class="btn btn-primary">Sair da conta</button>
+          </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="profile-tab-pane"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+            tabindex="0"
+            style="padding: 1.5rem 0;"
+          >
+            <div class="grid-p">
+
+              <div class="card mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4 p-3">
+                    <img src="../imagens/box-seam.svg" class="img-fluid rounded-start" alt="box" width="100%"/>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Pedido NºX</h5>
+                      <p class="card-text">
+                        Itens do pedido
+                      </p>
+                      <div class="alert alert-primary" role="alert">
+                        Status: A caminho!
+                      </div>
+                      <div class="alert alert-status" role="alert">
+                        Status: Entregue!
+                      </div>
+                      <button type="button" class="btn btn-outline-primary"><img src="../imagens/icons/repeat.svg" alt="">  Repetir Compra</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
