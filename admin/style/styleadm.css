@@ -1,7 +1,0 @@
-*::-webkit-scrollbar {
-  width: 10px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: #9ba5c9 !important; /* color of the tracking area */
-}
